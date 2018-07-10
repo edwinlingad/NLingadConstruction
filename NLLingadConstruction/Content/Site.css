@@ -1,0 +1,258 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    padding: 10px 15px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #9d9d9d;
+    background-color: transparent;
+}
+
+.cbp-af-header-shrink {
+    padding: 0;
+    opacity: 0.8;
+}
+
+    .cbp-af-header-shrink img {
+        -moz-transform: scale(0.75, 0.75);
+        -ms-transform: scale(0.75, 0.75);
+        -o-transform: scale(0.75, 0.75);
+        -webkit-transform: scale(0.75, 0.75);
+        transform: scale(0.75, 0.75);
+    }
+
+#brand-logo img {
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#top {
+    position: relative;
+}
+
+    #top .top-background {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    #top .company-frontpage {
+        color: white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-shadow: 5px 5px 8px black;
+        /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    }
+
+        #top .company-frontpage .company-name {
+            font-weight: bolder;
+            font-size: 48px;
+        }
+
+        #top .company-frontpage .company-sub-desc h4 {
+            font-size: 26px;
+        }
+
+        #top .company-frontpage .company-quote {
+            text-align: right;
+        }
+
+    #top .down-button-div {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+        #top .down-button-div a, #goto-top-button-div a {
+            color: white;
+            opacity: 0.7;
+        }
+
+            #top .down-button-div a:hover, #goto-top-button-div a:hover {
+                opacity: 1;
+            }
+
+#architect, #designers, #builders {
+    display: inline;
+    opacity: 0;
+    font-size: 26px;
+}
+
+.filler {
+    min-height: 350px;
+}
+
+#profile {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+    #profile > div {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+#projects {
+    margin: 50px 0;
+}
+
+    #projects > div {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #projects .carousel {
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px gray;
+        margin-top: 50px;
+    }
+
+    #projects .carousel-inner .carousel-caption {
+        background-color: black;
+        opacity: 0.15;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        text-align: left;
+        padding-left: 20px;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+
+        #projects .carousel-inner .carousel-caption:hover {
+            opacity: 0.8;
+        }
+
+@media(max-width: 640px) {
+    #projects .carousel-inner .carousel-caption {
+        height: 50%;
+    }
+
+        #projects .carousel-inner .carousel-caption h3 {
+            font-size: 14px;
+        }
+
+        #projects .carousel-inner .carousel-caption span {
+            font-size: 10px;
+        }
+}
+
+#testimonials {
+    min-height: 450px;
+    background-color: AppWorkspace;
+}
+
+.contact-us {
+    margin: 50px auto;
+}
+
+#contact {
+}
+
+    #contact h2 {
+        font-weight: bold;
+    }
+
+footer {
+    height: 200px;
+    background-color: #343434;
+    margin-bottom: -20px;
+    color: white;
+}
+
+.like-page {
+    margin-top: 70px;
+}
+
+    .like-page a, .like-page a:visited {
+        color: white;
+    }
+
+    .like-page .facebook-icon:hover {
+        color: #4862a3;
+    }
+
+    .like-page .twitter-icon:hover {
+        color: #0084b4;
+    }
+
+    .like-page .gplus-icon:hover {
+        color: #d74633;
+    }
+
+    .like-page i {
+        margin: 0 5px;
+    }
+
+    .like-page .like-text {
+        color: gray;
+        margin-top: 7px;
+    }
+
+.developer {
+    margin-top: 10px;
+    color: #5077d3;
+}
+
+    .developer span {
+        color: white;
+    }
+
+#goto-top-button-div {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    opacity: 0;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+    #goto-top-button-div a {
+        color: lawngreen;
+    }

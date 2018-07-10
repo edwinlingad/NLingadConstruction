@@ -1,0 +1,171 @@
+﻿@model IEnumerable<NLLingadConstruction.Models.ProjectViewModel>
+
+@{
+    ViewBag.Title = "N.L.Lingad Construction";
+}
+
+<section id="top" class="row ed-img-fill-screen ed-img-fixed-attachment" style='background-image:url("/Content/Images/main.jpg")'>
+    <div class="top-background"></div>
+    <div class="company-frontpage">
+        <h1 class="company-name" style="opacity:0">N. L. LINGAD CONSTRUCTION</h1>
+        <div class="company-sub-desc">
+            <div id="architect">
+                <span> ARCHITECT </span>
+            </div>
+            <div id="designers">
+                <span class="fa fa-cog"></span>
+                <span> DESIGNERS </span>
+            </div>
+            <div id="builders">
+                <span class="fa fa-cog"></span>
+                <span> BUILDERS</span>
+            </div>
+        </div>
+        <span id="quote" class="company-quote" style="opacity: 0">
+            "We shape our buildings; thereafter they shape us." <br />
+            - Winston Churchill
+        </span>
+    </div>
+    <div class="down-button-div">
+        <a href="#profile">
+            <i class="fa fa-chevron-circle-down fa-4x"></i>
+        </a>
+    </div>
+
+    @*<div id="testButton" class="btn btn-default" style="position: absolute; bottom: 0;">Press</div>*@
+</section>
+
+<section id="profile" class="filler row">
+    <div>
+        <h2 class="text-center wow rotateInDownLeft">COMPANY PROFILE</h2>
+        <div class="wow zoomIn">
+            <div class="col-sm-6">
+                <p>
+                    After graduating from the University of the Assumption College of Architecture, Architect Nelson L. Lingad was employed as a draftsman for three years by one of the recognized architectural firms in San Fernando, Pampanga specializing in commercial buildings and residences.
+                    <br />
+                    <br />
+                    In his years working in the said architectural company, he had the opportunity to widen his knowledge in doing architectural designs and practice in building projects. He gained his extensive experience in actual construction when he was assigned as field supervisor in one of the firm's projects. More construction projects were completed under his supervision, therefore more knowledge were implanted in his young mind. It was also during these projects management where he earned to develop the confidence in dealing with clients. Through all the experiences he acquired, these became his stepping stone to find his own niche in the field of construction and soon had the opportunity to have his first set of clients.
+                    <br />
+                    <br />
+                    In 1996, just before he passed the licensure examination for architects, Architect Nelson L. Lingad already established his own architectural firm N.L. Lingad Construction in San Fernando, Pampanga.
+                    <br />
+                    <br />
+                    <strong>N.L. Lingad Construction</strong> is a partnership firm built with his wife, who herself was also a Bachelor of Science in Architecture graduate. In the early years of the firm, they only offered design and supervision services. Together, they teamed up to work from projects conceptualization, drawing plans, estimates to documentation and other related works necessary for the construction proper. Not long after, as the firm progressed and saw the necessity for expansion, they eventually ventured in design-build services to realize more of their clients' need for more effective and quality workmanship.
+                    <br />
+                    <br />
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    The first break started out when the firm was commissioned to build the Medical Arts Building of V.L. Makabali Memorial Hospital in San Fernando, Pampanga. It was also during the completion of this project where Arch. Nelson L. Lingad got the chance to meet his next clients who were mostly in the field of medicine.
+                    <br />
+                    <br />
+                    Most of the firm’s clientele were acquired through the recommendations of previous clients who experienced satisfaction in its services. Every piece of work being undertaken has the quality and aesthetic value every client is looking for. Also, the structures that were being completed became the firm's instruments to attract more clients.
+                    <br />
+                    <br />
+                    To date, the firm has done numerous projects in Batangas, Cavite, Metro Manila, Bulacan and Pampanga and looking forward to gain access in other parts of the country.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div>
+        <h2 class="text-center wow flipInX">PROJECTS SUCCESSFULLY COMPLETED </h2>
+        <div id="carousel" class="carousel slide wow fadeInUpBig" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                @{
+                    int count = 0;
+                    foreach (var item in Model)
+                    {
+                        if (count == 0)
+                        {
+                            <li data-target="#carousel" data-slide-to="@count" class="active"></li>
+                        }
+                        else
+                        {
+                            <li data-target="#carousel" data-slide-to="@count"></li>
+                        }
+                        count++;
+                    }
+                }
+
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                @{
+                    bool isActive = true;
+                    string active = "active";
+
+                    foreach (var item in Model)
+                    {
+                        <div class="item @active">
+                            <img src="@item.ImageUrl" />
+                            <div class="carousel-caption">
+                                <h3>
+                                    <strong>Owner : </strong> @item.Owner
+                                </h3>
+                                <p><strong>Location :</strong> @item.Location</p>
+                            </div>
+                        </div>
+
+                        if (isActive)
+                        {
+                            isActive = false;
+                            active = "";
+                        }
+                    }
+                }
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+@*<section id="testimonials" class="row ed-img-fill-screen ed-img-fixed-attachment" style='background-image:url("/Content/Images/thXX0L8H3X.jpg")'></section>*@
+
+<section id="contact" class="row contact-us text-center">
+    <h3>Contact Us</h3>
+    <h2 class="wow fadeInDown">N. L. LINGAD CONSTRUCTION</h2>
+    <div class="wow bounceInLeft" data-wow-delay="0.5s">
+        <h4>
+            <span @*class="wow bounceInLeft" data-wow-delay="1.5s"*@>ARCHITECT</span>
+            <span class="fa fa-cog fa-spin"></span>
+            <span @*class="wow bounceInLeft" data-wow-delay="1s"*@>DESIGNERS</span>
+            <span class="fa fa-cog fa-spin"></span>
+            <span @*class="wow bounceInLeft" data-wow-delay="0.5s"*@>BUILDERS</span>
+        </h4>
+    </div>
+    <address class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1.5s">
+        <div>
+            <strong>ADDRESS:</strong>
+            0202 San Jose, City of San Fernando, Pampanga
+        </div>
+        <div>
+            <strong>PHONE:</strong>
+            +63.45.436.1946
+        </div>
+        <div>
+            <strong>MOBILE:</strong>
+            +63.939.905.5744
+            +63.932.867.9808
+        </div>
+        <div>
+            <strong>E-MAIL:</strong>
+            nelson.lingad@yahoo.com
+        </div>
+    </address>
+</section>

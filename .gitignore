@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/NLLingadConstruction/bin
+/NLLingadConstruction/obj
+/NLLingadConstruction/Properties/PublishProfiles
